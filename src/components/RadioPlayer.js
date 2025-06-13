@@ -2,8 +2,8 @@ import React, { useEffect, useRef, useState } from 'react';
 import { FaYoutube, FaFacebook, FaWhatsapp, FaShareAlt, FaVolumeUp, FaVolumeDown, FaPause, FaPlay } from 'react-icons/fa';
 
 const streamUrl = 'http://08.stmip.net:8668/;';
-const currentSongUrl = "http://localhost:5000/api/currentsong";
-const siteUrl = 'http://localhost:3000';
+const currentSongUrl = "https://back-radio-production.up.railway.app/api/currentsong";
+const siteUrl = 'https://web-radio-agape.vercel.app/';
 
 const RadioPlayer = () => {
   const audioRef = useRef(null);
@@ -43,7 +43,7 @@ const RadioPlayer = () => {
       audioRef.current.volume = newVolume;
     }
   };
-  
+
 
   useEffect(() => {
     let isMounted = true;
@@ -93,7 +93,7 @@ const RadioPlayer = () => {
       justifyContent: 'center',
       alignItems: 'center',
       fontFamily: "'Playfair Display', serif",
-      
+
       boxSizing: 'border-box',
     }}>
       <img src="/logo.png" alt="Logo Rádio Ágape" style={{ width: '160px', marginBottom: '30px' }} />
